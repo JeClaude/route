@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    background-color: #ffffff;
+    color: #212121;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Inter", system-ui, sans-serif;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center font-bold uppercase tracking-wider text-sm px-6 py-3 rounded-sm transition-all duration-200 cursor-pointer;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary text-white hover:bg-primary-dark;
+  }
+
+  .btn-outline {
+    @apply btn border-2 border-gray-300 text-gray-800 hover:border-primary hover:text-primary bg-transparent;
+  }
+
+  .btn-lg {
+    @apply px-8 py-4 text-base h-14;
+  }
+
+  .input-field {
+    @apply w-full border border-gray-200 rounded-sm px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary bg-white transition-colors;
+  }
+
+  .card {
+    @apply bg-white border border-gray-200 rounded-sm;
+  }
+
+  .section-label {
+    @apply font-mono text-xs uppercase tracking-widest text-primary mb-3;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-display font-black tracking-tighter leading-none;
+  }
+
+  .container {
+    @apply max-w-7xl mx-auto px-4;
+  }
+}
