@@ -73,7 +73,7 @@ export default function Contact() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
             >
-              <div className="card p-8 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700">
+              <div className="card p-8 bg-white dark:bg-gray-900 rounded-sm">
                 <h3 className="font-black text-xl mb-6 pb-4 border-b border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white">Headquarters</h3>
                 <ul className="space-y-6">
                   <li className="flex items-start gap-4">
@@ -111,7 +111,7 @@ export default function Contact() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
             >
-              <div className="card p-8 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700">
+              <div className="card p-8 bg-white dark:bg-gray-900 rounded-sm">
                 {status === "success" ? (
                   <div className="py-12 flex flex-col items-center justify-center text-center">
                     <CheckCircle2 className="h-16 w-16 text-primary mb-6" />

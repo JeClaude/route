@@ -47,7 +47,7 @@ export default function Services() {
           {loading ? (
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {[1, 2, 3, 4, 5, 6].map((i) => (
-                <div key={i} className="h-96 bg-gray-100 dark:bg-gray-800 animate-pulse rounded-sm border border-gray-200 dark:border-gray-700" />
+                <div key={i} className="h-96 bg-gray-100 dark:bg-gray-800 animate-pulse rounded-sm" />
               ))}
             </div>
           ) : (
@@ -60,7 +60,7 @@ export default function Services() {
               {services.map((service) => (
                 <motion.div key={service.id} variants={fadeIn} className="h-full">
                   <Link href={`/services/${service.slug}`} className="block h-full">
-                    <div className="h-full card hover:border-primary/50 transition-colors group flex flex-col overflow-hidden hover:shadow-md bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+                    <div className="h-full card transition-colors group flex flex-col overflow-hidden rounded-sm bg-white dark:bg-gray-800 hover:shadow-md">
                       <div className="aspect-[16/10] overflow-hidden bg-gray-100 dark:bg-gray-700 relative">
                         <img
                           src={getServiceImage(service.slug)}
@@ -69,7 +69,7 @@ export default function Services() {
                           loading="lazy"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-white/20 dark:from-black/20 to-transparent pointer-events-none" />
-                        <div className="absolute top-3 left-3 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border border-gray-200 dark:border-gray-700 px-2 py-1 rounded-sm">
+                        <div className="absolute top-3 left-3 bg-white/80 dark:bg-gray-900/70 backdrop-blur-sm px-2 py-1 rounded-sm">
                           <span className="font-mono text-[10px] uppercase tracking-widest text-primary">
                             {service.slug.replace(/-/g, " ")}
                           </span>
