@@ -61,7 +61,7 @@ export default function About() {
               viewport={{ once: true }}
               variants={fadeIn}
             >
-              <div className="aspect-[4/3] rounded-sm overflow-hidden">
+              <div className="aspect-[4/3] rounded-sm overflow-hidden border border-gray-200 dark:border-gray-700">
                 <img src={intermodalImage} alt="Intermodal shipping port" className="w-full h-full object-cover" />
               </div>
             </motion.div>
@@ -79,7 +79,7 @@ export default function About() {
               { value: (stats?.onTimeRate ?? 98) + "%", label: "On-Time Rate" },
               { value: "24/7", label: "Dispatch Support" },
             ].map((s, i) => (
-              <div key={i} className="card p-8 text-center bg-white dark:bg-gray-800 rounded-sm">
+              <div key={i} className="card p-8 text-center bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
                 <div className="text-4xl md:text-5xl font-black tracking-tighter mb-2 text-gray-900 dark:text-white">{s.value}</div>
                 <div className="text-xs font-mono text-gray-400 dark:text-gray-500 uppercase tracking-widest">{s.label}</div>
               </div>

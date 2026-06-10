@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Menu, X, Phone, Mail, ArrowRight, Moon, Sun } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../assets/route-freight-logo.png";
-import markLogo from "../assets/route-freight-mark.png";
+import markLogo from "../assets/12-1.png";
 import { useDarkMode } from "../context/DarkModeContext";
 
 const navLinks = [
@@ -42,7 +42,7 @@ export default function Layout({ children }) {
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
           <Link href="/" className="flex items-center shrink-0">
             <div className="bg-white dark:bg-[#111827] inline-block p-1 rounded-sm transition-colors duration-300">
-              <img src={isDark ? markLogo : logo} alt="Route Freight" className="h-8 sm:h-10 w-auto object-contain" />
+              <img src={isDark ? markLogo : logo} alt="Route Freight" className="h-16 w-auto object-contain" />
             </div>
           </Link>
 
@@ -136,8 +136,8 @@ export default function Layout({ children }) {
       <footer className="bg-gray-900 dark:bg-[#111827] text-white py-12 md:py-16 transition-colors duration-300">
         <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="md:col-span-2">
-            <div className="bg-white dark:bg-[#111827] inline-block p-3 rounded-sm mb-5">
-              <img src={isDark ? markLogo : logo} alt="Route Freight" className="h-10 w-auto object-contain" />
+            <div className=" dark:bg-[#111827] inline-block p-3 rounded-sm mb-5">
+              <img src={markLogo} alt="Route Freight" className="h-20 w-auto object-contain" />
             </div>
             <p className="text-gray-400 text-sm max-w-sm mb-6 leading-relaxed">
               A dedicated freight and logistics partner. We move full truckload, refrigerated, flatbed,

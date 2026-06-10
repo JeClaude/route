@@ -73,7 +73,7 @@ export default function ServiceDetail() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="aspect-[21/9] overflow-hidden rounded-sm bg-gray-100 dark:bg-gray-800"
+            className="aspect-[21/9] overflow-hidden border border-gray-200 dark:border-gray-700 rounded-sm bg-gray-100 dark:bg-gray-800"
           >
             <img src={heroImage} alt={service.name} className="w-full h-full object-cover" />
           </motion.div>
@@ -94,7 +94,7 @@ export default function ServiceDetail() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: i * 0.07 }}
-                    className="flex items-start gap-4 p-5 card bg-white dark:bg-gray-800 rounded-sm"
+                    className="flex items-start gap-4 p-5 card bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700"
                   >
                     <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                     <span className="text-gray-700 dark:text-gray-300">{feature}</span>
@@ -105,7 +105,7 @@ export default function ServiceDetail() {
 
             {/* Sidebar CTA */}
             <aside>
-              <div className="card p-8 lg:sticky lg:top-28 bg-white dark:bg-gray-800 rounded-lg">
+              <div className="card p-8 lg:sticky lg:top-28 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
                 <div className="section-label">Move it with us</div>
                 <h3 className="text-2xl font-black mb-3 tracking-tight text-gray-900 dark:text-white">Ready to move?</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-8">
@@ -134,7 +134,7 @@ export default function ServiceDetail() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {others.map((other) => (
                 <Link key={other.id} href={`/services/${other.slug}`} className="block group">
-                  <div className="card overflow-hidden transition-colors bg-white dark:bg-gray-900 rounded-sm hover:shadow-md">
+                  <div className="card overflow-hidden hover:border-primary/50 transition-colors bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700">
                     <div className="aspect-[16/10] overflow-hidden bg-gray-100 dark:bg-gray-800">
                       <img
                         src={getServiceImage(other.slug)}

@@ -20,68 +20,63 @@ export default function Home() {
 
   return (
     <div className="flex flex-col bg-white dark:bg-gray-900 transition-colors duration-300">
-      {/* ── Hero (Modern Corporate prototype) ───────────────────────────────── */}
-      <section className="bg-[#0b1220] dark:bg-[#0b1220] transition-colors duration-300">
-        <div className="container mx-auto px-4 py-20 md:py-28">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      {/* ── Hero ─────────────────────────────────────────────────────────── */}
+      <section className="bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 transition-colors duration-300">
+        <div className="container mx-auto px-4 py-12 md:py-24">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* Left — copy */}
-            <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="text-white">
-              <motion.div variants={fadeIn} className="inline-flex items-center gap-2 px-3 py-1 bg-white/6 border border-white/10 rounded-full mb-6">
+            <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="order-2 lg:order-1">
+              <motion.div variants={fadeIn} className="inline-flex items-center gap-2 px-3 py-1 bg-orange-50 dark:bg-orange-900/30 border border-orange-200 dark:border-orange-800 rounded-full mb-5">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                <span className="text-white font-mono text-xs uppercase tracking-widest">Modern Logistics · Trusted</span>
+                <span className="text-primary font-mono text-xs uppercase tracking-widest">New · Independent · Hungry</span>
               </motion.div>
 
-              <motion.h1 variants={fadeIn} className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
-                Freight Solutions
-                <br />
-                <span className="text-white/95">That Move Your Business Forward</span>
+              <motion.h1 variants={fadeIn} className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter mb-5 leading-none text-gray-900 dark:text-white">
+                FREIGHT,<br />
+                <span className="text-primary">DONE RIGHT.</span>
               </motion.h1>
 
-              <motion.p variants={fadeIn} className="text-lg text-white/80 max-w-2xl mb-8 leading-relaxed">
-                We handle full truckload, refrigerated, flatbed and specialized shipments across North America. Fast quotes, transparent pricing,
-                and live dispatch support — so your freight arrives on time, every time.
+              <motion.p variants={fadeIn} className="text-lg text-gray-600 dark:text-gray-300 max-w-xl mb-8 leading-relaxed">
+                Route Freight is a small, dedicated team moving truckload, refrigerated, flatbed and specialized cargo across North America.
+                Honest pricing. Real people on the phone. Every shipment treated like our first.
               </motion.p>
 
-              <motion.div variants={fadeIn} className="flex flex-col sm:flex-row gap-4">
+              <motion.div variants={fadeIn} className="flex flex-col sm:flex-row gap-3">
                 <Link href="/contact">
-                  <button className="bg-primary text-white font-bold px-6 py-3 rounded-md shadow hover:shadow-lg transition">
-                    Get a Quote
+                  <button className="btn btn-primary btn-lg w-full sm:w-auto gap-2">
+                    Contact Us <ArrowRight className="h-5 w-5" />
                   </button>
                 </Link>
                 <Link href="/services">
-                  <button className="border border-white/20 text-white px-6 py-3 rounded-md hover:bg-white/6 transition">
-                    Explore Services
+                  <button className="btn btn-outline btn-lg w-full sm:w-auto dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800">
+                    Our Services
                   </button>
                 </Link>
               </motion.div>
-
-              <motion.div variants={fadeIn} className="mt-8 text-sm text-white/60">
-                <strong className="text-white">Dispatch:</strong> 24/7 support · <strong className="text-white">ETA:</strong> Rapid lane quoting
-              </motion.div>
             </motion.div>
 
-            {/* Right — hero image panel */}
+            {/* Right — truck image */}
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.97 }}
+              animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
-              className="relative"
+              className="order-1 lg:order-2 relative"
             >
-              <div className="aspect-[16/11] rounded-lg overflow-hidden shadow-2xl border border-white/6">
-                <img src={heroImage} alt="Semi truck on highway" className="w-full h-full object-cover brightness-90" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-                <div className="absolute bottom-6 left-6 bg-white/6 text-white px-3 py-2 rounded-md font-mono text-xs uppercase tracking-widest flex items-center gap-2">
-                  <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                  Real-Time Dispatch
+              <div className="aspect-[4/3] rounded-sm overflow-hidden border border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 relative">
+                <img src={heroImage} alt="Semi truck on highway" className="w-full h-full object-cover" />
+                <div className="absolute bottom-3 left-3 bg-gray-900 dark:bg-black text-white px-3 py-1.5 rounded-sm font-mono text-xs uppercase tracking-widest flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse" />
+                  Dispatch Active 24/7
                 </div>
               </div>
+              <div className="hidden sm:block absolute -bottom-3 -right-3 w-20 h-20 bg-primary -z-10" />
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* ── Stats ─────────────────────────────────────────────────────────── */}
-      <section className="py-12 border-b border-transparent dark:border-transparent bg-white dark:bg-gray-900 transition-colors duration-300">
+      <section className="py-12 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 transition-colors duration-300">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
@@ -133,7 +128,7 @@ export default function Home() {
                 transition={{ delay: i * 0.07 }}
               >
                 <Link href={`/services/${service.slug}`} className="block h-full">
-                    <div className="h-full card transition-colors group flex flex-col overflow-hidden rounded-sm bg-white dark:bg-gray-900 hover:shadow-md">
+                  <div className="h-full card hover:border-primary transition-colors group flex flex-col overflow-hidden hover:shadow-md bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700">
                     <div className="aspect-[16/10] overflow-hidden bg-gray-100 dark:bg-gray-800 relative">
                       <img
                         src={getServiceImage(service.slug)}
@@ -141,7 +136,7 @@ export default function Home() {
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         loading="lazy"
                       />
-                      <div className="absolute top-3 left-3 bg-white/80 dark:bg-gray-900/70 backdrop-blur-sm px-2 py-1 rounded-sm">
+                      <div className="absolute top-3 left-3 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border border-gray-200 dark:border-gray-700 px-2 py-1 rounded-sm">
                         <span className="font-mono text-[10px] uppercase tracking-widest text-primary">
                           {service.slug.replace(/-/g, " ")}
                         </span>
@@ -189,7 +184,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                  className="card p-8 bg-white dark:bg-gray-800 rounded-sm"
+                className="card p-8 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700"
               >
                 <div className="w-12 h-12 bg-orange-50 dark:bg-orange-900/30 border border-orange-200 dark:border-orange-800 rounded-sm flex items-center justify-center mb-5">
                   <Icon className="h-6 w-6 text-primary" />
@@ -218,7 +213,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="card p-8 relative bg-white dark:bg-gray-900 rounded-sm"
+                  className="card p-8 relative bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700"
                 >
                   <div className="text-primary text-6xl font-serif absolute top-2 left-5 opacity-20 leading-none">"</div>
                   <div className="flex mb-4 text-primary">
@@ -266,7 +261,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.15 }}
-              className="bg-white dark:bg-gray-900 rounded-lg p-8 shadow-2xl"
+              className="bg-white dark:bg-gray-900 rounded-sm p-8 shadow-2xl border border-gray-200 dark:border-gray-700"
             >
               <div className="font-mono text-xs uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-5">Reach Dispatch</div>
               <a href="tel:+1 (479) 280-8795" className="flex items-center gap-3 mb-3 group">
